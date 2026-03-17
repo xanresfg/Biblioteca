@@ -56,4 +56,20 @@ public class GestorMediateca {
         }
         return null;
     }
+
+    public static void modificarTitulo() {
+        System.out.print("ID: ");
+        String id = sc.nextLine();
+
+        ItemBiblioteca item = buscarPorId(id);
+
+        if (item != null) {
+            System.out.print("Nuevo título: ");
+            String nuevo = sc.nextLine();
+            item.setTitulo(nuevo);
+            System.out.println("Título actualizado.");
+        } else {
+            System.out.println("Ítem no encontrado.");
+        }
+    }
 }
