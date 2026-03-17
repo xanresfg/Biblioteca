@@ -23,4 +23,10 @@ public class Revista extends ItemBiblioteca{
     public double calcularMulta(int diasRetraso){
         return (diasRetraso-getDiasMaximosPrestamo());
     }
+
+    @Override
+    public String toString() {
+        return super.toString() +
+                ", numeroEdicion='" + numeroEdicion + '\'';
+    }
 }
