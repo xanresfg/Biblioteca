@@ -18,4 +18,9 @@ public class Libro extends ItemBiblioteca{
     public int getDiasMaximosPrestamo(){
         return 14;
     }
+
+    @Override
+    public double calcularMulta(double diasRetraso){
+        return (diasRetraso-getDiasMaximosPrestamo())*0.5;
+    }
 }
