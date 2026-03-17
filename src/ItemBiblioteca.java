@@ -32,4 +32,8 @@ public abstract class ItemBiblioteca {
     public void setEstadoPrestado(boolean estadoPrestado) {
         this.estadoPrestado = estadoPrestado;
     }
+
+    public void prestar(){
+        setEstadoPrestado(true);
+    }
 }
