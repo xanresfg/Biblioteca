@@ -11,4 +11,40 @@ public class GestorMediateca {
             System.out.println(item);
         }
     }
+
+    public static void anadirItem() {
+        System.out.println("Tipo (1 Libro, 2 Revista, 3 DVD): ");
+        int tipo = sc.nextInt();
+        sc.nextLine();
+
+        System.out.print("ID: ");
+        String id = sc.nextLine();
+
+        System.out.print("Título: ");
+        String titulo = sc.nextLine();
+
+        switch (tipo) {
+            case 1:
+                System.out.print("Autor: ");
+                String autor = sc.nextLine();
+                catalogo.add(new Libro(id, titulo, autor));
+                break;
+
+            case 2:
+                System.out.print("Número edición: ");
+                int num = sc.nextInt();
+                sc.nextLine();
+                catalogo.add(new Revista(id, titulo, num));
+                break;
+
+            case 3:
+                System.out.print("Director: ");
+                String director = sc.nextLine();
+                catalogo.add(new DVD(id, titulo, director));
+                break;
+
+            default:
+                System.out.println("Tipo no válido");
+        }
+    }
 }
