@@ -23,4 +23,10 @@ public class Libro extends ItemBiblioteca{
     public double calcularMulta(int diasRetraso){
         return (diasRetraso-getDiasMaximosPrestamo())*0.5;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() +
+                ", autor='" + autor + '\'';
+    }
 }
