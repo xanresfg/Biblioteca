@@ -36,4 +36,8 @@ public abstract class ItemBiblioteca {
     public void prestar(){
         setEstadoPrestado(true);
     }
+
+    public void devolver(){
+        setEstadoPrestado(true);
+    }
 }
