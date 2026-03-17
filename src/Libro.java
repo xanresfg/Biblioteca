@@ -13,4 +13,9 @@ public class Libro extends ItemBiblioteca{
     public void setAutor(String autor) {
         this.autor = autor;
     }
+
+    @Override
+    public int getDiasMaximosPrestamo(){
+        return 14;
+    }
 }
