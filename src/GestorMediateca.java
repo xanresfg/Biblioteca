@@ -72,4 +72,23 @@ public class GestorMediateca {
             System.out.println("Ítem no encontrado.");
         }
     }
+
+    public static void prestarItem() {
+        System.out.print("ID: ");
+        String id = sc.nextLine();
+
+        ItemBiblioteca item = buscarPorId(id);
+
+        if (item != null) {
+            if (!item.isEstadoPrestado()) {
+                item.prestar();
+                System.out.println("Prestado correctamente.");
+                System.out.println("Tienes " + item.getDiasMaximosPrestamo() + " días.");
+            } else {
+                System.out.println("Ya está prestado.");
+            }
+        } else {
+            System.out.println("Ítem no encontrado.");
+        }
+    }
 }
