@@ -47,4 +47,13 @@ public class GestorMediateca {
                 System.out.println("Tipo no válido");
         }
     }
+
+    public static ItemBiblioteca buscarPorId(String id) {
+        for (ItemBiblioteca item : catalogo) {
+            if (item.getId().equals(id)) {
+                return item;
+            }
+        }
+        return null;
+    }
 }
