@@ -43,5 +43,5 @@ public abstract class ItemBiblioteca {
 
     public abstract int getDiasMaximosPrestamo();
 
-    public abstract double calcularMulta(double diasRetraso);
+    public abstract double calcularMulta(int diasRetraso);
 }

@@ -20,7 +20,7 @@ public class Revista extends ItemBiblioteca{
     }
 
     @Override
-    public double calcularMulta(double diasRetraso){
+    public double calcularMulta(int diasRetraso){
         return (diasRetraso-getDiasMaximosPrestamo());
     }
 }
