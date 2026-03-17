@@ -1,8 +1,8 @@
 public class Libro extends ItemBiblioteca{
     private String autor;
 
-    public Libro(String id, String titulo, boolean estadoPrestado, String autor) {
-        super(id, titulo, estadoPrestado);
+    public Libro(String id, String titulo, String autor) {
+        super(id, titulo);
         this.autor = autor;
     }
 

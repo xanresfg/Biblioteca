@@ -1,8 +1,8 @@
 public class Revista extends ItemBiblioteca{
     private int numeroEdicion;
 
-    public Revista(String id, String titulo, boolean estadoPrestado, int numeroEdicion) {
-        super(id, titulo, estadoPrestado);
+    public Revista(String id, String titulo, int numeroEdicion) {
+        super(id, titulo);
         this.numeroEdicion = numeroEdicion;
     }
 
