@@ -5,4 +5,10 @@ public class GestorMediateca {
 
     static ArrayList<ItemBiblioteca> catalogo = new ArrayList<>();
     static Scanner sc = new Scanner(System.in);
+
+    public static void mostrarCatalogo() {
+        for (ItemBiblioteca item : catalogo) {
+            System.out.println(item);
+        }
+    }
 }
