@@ -6,6 +6,48 @@ public class GestorMediateca {
     static ArrayList<ItemBiblioteca> catalogo = new ArrayList<>();
     static Scanner sc = new Scanner(System.in);
 
+    public static void main(String[] args) {
+
+        int opcion;
+
+        do {
+            System.out.println("\n--- MEDIATECA ---"+
+                    "\n1. Mostrar catálogo"+
+                    "\n2. Añadir ítem"+
+                    "\n3. Modificar título"+
+                    "\n4. Prestar ítem"+
+                    "\n5. Devolver ítem"+
+                    "\n6. Salir"+
+                    "\nElige opción: ");
+            opcion = sc.nextInt();
+            sc.nextLine();
+
+            switch (opcion) {
+                case 1:
+                    mostrarCatalogo();
+                    break;
+                case 2:
+                    anadirItem();
+                    break;
+                case 3:
+                    modificarTitulo();
+                    break;
+                case 4:
+                    prestarItem();
+                    break;
+                case 5:
+                    devolverItem();
+                    break;
+                case 6:
+                    System.out.println("Saliendo...");
+                    break;
+                default:
+                    System.out.println("Opción inválida");
+            }
+
+        } while (opcion != 6);
+    }
+
     public static void mostrarCatalogo() {
         for (ItemBiblioteca item : catalogo) {
             System.out.println(item);
