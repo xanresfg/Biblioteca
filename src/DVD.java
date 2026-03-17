@@ -13,4 +13,9 @@ public class DVD extends ItemBiblioteca{
     public void setDirector(String director) {
         this.director = director;
     }
+
+    @Override
+    public int getDiasMaximosPrestamo(){
+        return 3;
+    }
 }
