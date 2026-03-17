@@ -44,4 +44,13 @@ public abstract class ItemBiblioteca {
     public abstract int getDiasMaximosPrestamo();
 
     public abstract double calcularMulta(int diasRetraso);
+
+    @Override
+    public String toString() {
+        return "ItemBiblioteca{" +
+                "id='" + id + '\'' +
+                ", titulo='" + titulo + '\'' +
+                ", estadoPrestado=" + estadoPrestado +
+                '}';
+    }
 }
