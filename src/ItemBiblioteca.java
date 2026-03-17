@@ -40,4 +40,6 @@ public abstract class ItemBiblioteca {
     public void devolver(){
         setEstadoPrestado(true);
     }
+
+    public abstract double calcularMulta(double diasRetraso);
 }
