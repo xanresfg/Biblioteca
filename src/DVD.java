@@ -18,4 +18,9 @@ public class DVD extends ItemBiblioteca{
     public int getDiasMaximosPrestamo(){
         return 3;
     }
+
+    @Override
+    public double calcularMulta(int diasRetraso){
+        return (diasRetraso-getDiasMaximosPrestamo())*2;
+    }
 }
