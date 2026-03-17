@@ -13,4 +13,9 @@ public class Revista extends ItemBiblioteca{
     public void setNumeroEdicion(int numeroEdicion) {
         this.numeroEdicion = numeroEdicion;
     }
+
+    @Override
+    public int getDiasMaximosPrestamo(){
+        return 7;
+    }
 }
