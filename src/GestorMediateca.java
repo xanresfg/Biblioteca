@@ -91,4 +91,32 @@ public class GestorMediateca {
             System.out.println("Ítem no encontrado.");
         }
     }
+
+    public static void devolverItem() {
+        System.out.print("ID: ");
+        String id = sc.nextLine();
+
+        ItemBiblioteca item = buscarPorId(id);
+
+        if (item != null) {
+            if (item.isEstadoPrestado()) {
+                item.devolver();
+
+                System.out.print("¿Hace cuantos dias fue prestado? ");
+                int dias = sc.nextInt();
+                sc.nextLine();
+
+                if (dias > 0) {
+                    double multa = item.calcularMulta(dias);
+                    System.out.println("Multa: " + multa + "€");
+                } else {
+                    System.out.println("Devuelto a tiempo.");
+                }
+            } else {
+                System.out.println("El ítem no estaba prestado.");
+            }
+        } else {
+            System.out.println("Ítem no encontrado.");
+        }
+    }
 }
